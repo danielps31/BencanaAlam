@@ -9,7 +9,7 @@ package Model;
  *
  * @author Shamgar
  */
-public class Admin extends Pengguna{
+public class Admin extends PERSON{
     private String id_admin;
 
     public Admin(String id_admin, String Username, String Nama, String email, String password) {

@@ -270,7 +270,7 @@ public class Login extends javax.swing.JFrame {
 
     private void ButtonmasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonmasukActionPerformed
         // TODO add your handling code here:
-       UserLapor a = new UserLapor();
+       HomeAfterLogin a = new HomeAfterLogin();
         a.setVisible(true);
         
         this.dispose();
