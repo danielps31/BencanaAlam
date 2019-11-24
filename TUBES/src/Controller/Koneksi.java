@@ -7,6 +7,7 @@ package Controller;
 
 import java.sql.*;
 import java.util.logging.*;
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -139,5 +140,25 @@ public class Koneksi {
             }
         }
         disconnect();
+    }
+    
+    public String cariId_user(String u){
+        String id = null;
+        for(User usr : user){
+            if (usr.getUsername().equals(u)) {
+                id = usr.getId_user();
+            }
+        } return id;
+    }
+        
+    public boolean cekUserLogin(String q, String p){
+        boolean cek = false;
+        for (User u : user) {
+            if (u.getUsername().equals(q) && u.getPassword().equals(p)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
     }
 }

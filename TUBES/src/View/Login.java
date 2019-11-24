@@ -5,6 +5,12 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author ACER
@@ -36,9 +42,9 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        Buttonmasuk = new javax.swing.JButton();
+        tfUsername = new javax.swing.JTextField();
+        tfPassword = new javax.swing.JPasswordField();
+        btnMasuk = new javax.swing.JButton();
         Daftar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Logo = new javax.swing.JPanel();
@@ -109,14 +115,20 @@ public class Login extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Username       :");
 
-        jPasswordField1.setText("jPasswordField1");
-
-        Buttonmasuk.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        Buttonmasuk.setForeground(new java.awt.Color(1, 1, 1));
-        Buttonmasuk.setText("MASUK");
-        Buttonmasuk.addActionListener(new java.awt.event.ActionListener() {
+        tfUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonmasukActionPerformed(evt);
+                tfUsernameActionPerformed(evt);
+            }
+        });
+
+        tfPassword.setText("jPasswordField1");
+
+        btnMasuk.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        btnMasuk.setForeground(new java.awt.Color(1, 1, 1));
+        btnMasuk.setText("MASUK");
+        btnMasuk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasukActionPerformed(evt);
             }
         });
 
@@ -150,12 +162,12 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(jTextField1))))
+                            .addComponent(tfPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(tfUsername))))
                 .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Buttonmasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(153, 153, 153))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -173,13 +185,13 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addComponent(Daftar)))
                 .addGap(43, 43, 43)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(86, 86, 86)
-                .addComponent(Buttonmasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(181, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -268,13 +280,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel6MouseClicked
 
-    private void ButtonmasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonmasukActionPerformed
+    private void btnMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasukActionPerformed
         // TODO add your handling code here:
-       HomeAfterLogin a = new HomeAfterLogin();
-        a.setVisible(true);
-        
-        this.dispose();
-    }//GEN-LAST:event_ButtonmasukActionPerformed
+
+    }//GEN-LAST:event_btnMasukActionPerformed
 
     private void LogoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoMouseClicked
         // TODO add your handling code here:
@@ -291,7 +300,38 @@ public class Login extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_DaftarMouseClicked
+
+    private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfUsernameActionPerformed
+
+    public JButton getButtonmasuk() {
+        return btnMasuk;
+    }
+
+    public String getTfPassword() {
+        return tfPassword.getText();
+    }
+
+    public void setTfPassword(String tfPassword) {
+        this.tfPassword.setText(tfPassword);
+    }
+
+    public String getTfUsername() {
+        return tfUsername.getText();
+    }
+
+    public void setTfUsername(String tfUsername) {
+        this.tfUsername.setText(tfUsername);
+    }
     
+    public void addActionListener(ActionListener x){
+        btnMasuk.addActionListener(x);
+    }
+    
+    public void showMessage(String message, String title, int type){
+        JOptionPane.showMessageDialog(null, message, title, type);
+    }
     
     /**
      * @param args the command line arguments
@@ -329,10 +369,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Buttonmasuk;
     private javax.swing.JLabel Daftar;
     private javax.swing.JPanel Logo;
     private javax.swing.JLabel Logo1;
+    private javax.swing.JButton btnMasuk;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
@@ -342,8 +382,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField tfPassword;
+    private javax.swing.JTextField tfUsername;
     // End of variables declaration//GEN-END:variables
 }
