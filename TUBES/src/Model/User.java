@@ -13,8 +13,8 @@ public class User extends PERSON{
     private String id_user;
     private int no_telp;
 
-    public User(String id_user, int no_telp, String Username, String Nama, String email, String password) {
-        super(Username, Nama, email, password);
+    public User(String id_user, int no_telp, String username, String Nama, String email, String password) {
+        super(username, Nama, email, password);
         this.id_user = id_user;
         this.no_telp = no_telp;
     }
