@@ -265,6 +265,11 @@ public class HomeAfterLogin extends javax.swing.JFrame {
 
     private void BantuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BantuMouseClicked
         // TODO add your handling code here:
+        Bantuan a = new Bantuan();
+        a.setVisible(true);
+        
+        this.dispose();
+        
     }//GEN-LAST:event_BantuMouseClicked
 
     /**

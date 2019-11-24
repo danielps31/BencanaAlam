@@ -64,7 +64,7 @@ public class Koneksi {
     public void loadUser() {
         connect();
         try {
-            String query = "SELECT * FROM User";
+            String query = "SELECT * FROM user";
             rs = stmt.executeQuery(query);
             while (rs.next()){
                 user.add(new User(rs.getString("id_user"), rs.getInt("no_telp"), rs.getString("username"), rs.getString("nama"), rs.getString("email"), rs.getString("password")));

@@ -215,7 +215,7 @@ public class UserLapor extends javax.swing.JFrame {
         jLabel7.setText("LAPORKAN BENCANA!");
 
         Jenis_bencana.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Jenis_bencana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jenis Bencana", "Item 2", "Item 3", "Item 4" }));
+        Jenis_bencana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gempa Bumi", "Tsunami", "Kebakaran Hutan", "Banjir", "Tornado" }));
 
         JAM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JAM.setText("Jam");
@@ -352,6 +352,10 @@ public class UserLapor extends javax.swing.JFrame {
 
     private void BantuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BantuMouseClicked
         // TODO add your handling code here:
+        Bantuan a = new Bantuan();
+        a.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_BantuMouseClicked
 
     private void JAMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JAMActionPerformed

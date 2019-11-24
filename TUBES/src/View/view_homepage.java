@@ -243,6 +243,7 @@ public class view_homepage extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_Masuk1MouseClicked
 
+    
     /**
      * @param args the command line arguments
      */

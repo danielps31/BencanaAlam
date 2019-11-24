@@ -5,6 +5,10 @@
  */
 package View;
 
+import javax.swing.JComboBox;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author ACER
@@ -52,10 +56,15 @@ public class Bantuan extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(102, 165, 173));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel7.setText("LAPORKAN BENCANA!");
+        jLabel7.setText("BANTUAN ANDA!");
 
         Jenis_bencana.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Jenis_bencana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jenis Bencana", "Item 2", "Item 3", "Item 4" }));
+        Jenis_bencana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pakaian", "Makanan", "Uang", " " }));
+        Jenis_bencana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jenis_bencanaActionPerformed(evt);
+            }
+        });
 
         JAM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JAM.setText("Jam");
@@ -377,8 +386,49 @@ public class Bantuan extends javax.swing.JFrame {
 
     private void BantuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BantuMouseClicked
         // TODO add your handling code here:
+        Bantuan a = new Bantuan();
+        a.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_BantuMouseClicked
 
+    private void Jenis_bencanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jenis_bencanaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Jenis_bencanaActionPerformed
+
+    public JTextField getJAM() {
+        return JAM;
+    }
+
+    public void setJAM(JTextField JAM) {
+        this.JAM = JAM;
+    }
+
+    public JComboBox<String> getJenis_bencana() {
+        return Jenis_bencana;
+    }
+
+    public void setJenis_bencana(JComboBox<String> Jenis_bencana) {
+        this.Jenis_bencana = Jenis_bencana;
+    }
+
+    public JTextArea getKeterangan() {
+        return Keterangan;
+    }
+
+    public void setKeterangan(JTextArea Keterangan) {
+        this.Keterangan = Keterangan;
+    }
+
+    public JTextField getLokasi() {
+        return Lokasi;
+    }
+
+    public void setLokasi(JTextField Lokasi) {
+        this.Lokasi = Lokasi;
+    }
+
+     
     /**
      * @param args the command line arguments
      */
