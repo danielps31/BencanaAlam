@@ -336,7 +336,7 @@ public class UserLapor extends javax.swing.JFrame {
 
     private void HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMouseClicked
         // TODO add your handling code here:
-        view_homepage a = new view_homepage();
+        HomeAfterLogin a = new HomeAfterLogin();
         a.setVisible(true);
 
         this.dispose();

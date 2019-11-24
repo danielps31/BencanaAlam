@@ -30,8 +30,8 @@
 //    public Connection() {
 //        loadMahasiswa();
 //    }
-//    
-//    public void connect(){     
+//
+//    public void connect(){
 //            String url = "jdbc:mysql://localhost/bencana";
 //            String user = "root";
 //            String pass = "";
@@ -44,7 +44,7 @@
 //            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
 //        }
 //    }
-//    
+//
 //    public void disconnect(){
 //        try {
 //            conn.close();
@@ -53,7 +53,7 @@
 //            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
 //        }
 //    }
-//    
+//
 //    public boolean manipulate(String query){
 //        boolean cek = false;
 //        try {
@@ -64,7 +64,7 @@
 //        }
 //        return cek;
 //    }
-//    
+//
 //    public void loadMahasiswa() {
 //        connect();
 //        try {
@@ -82,7 +82,7 @@
 //    public ArrayList<Mahasiswa> getMahasiswa() {
 //        return mahasiswa;
 //    }
-//    
+//
 //    public void addMahasiswa(Mahasiswa m) {
 //        connect();
 //        String query = "INSERT INTO mahasiswa VALUES (";
@@ -94,7 +94,7 @@
 //        if (manipulate(query)) mahasiswa.add(m);
 //        disconnect();
 //    }
-//     
+//
 //    public boolean cekDuplikatNIM(String nim){
 //        boolean cek = false;
 //        for (Mahasiswa mhs : mahasiswa) {
@@ -105,7 +105,7 @@
 //        }
 //        return cek;
 //    }
-//    
+//
 //    public void delMahasiswa(String nim) {
 //        connect();
 //        String query = "DELETE FROM mahasiswa WHERE nim='" + nim + "'";
@@ -119,7 +119,7 @@
 //        }
 //        disconnect();
 //    }
-//    
+//
 //    public void updateMahasiswa(Mahasiswa m) {
 //        connect();
 //        String query = "UPDATE mahasiswa SET";

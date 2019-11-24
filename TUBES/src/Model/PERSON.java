@@ -9,13 +9,13 @@ package Model;
  *
  * @author Shamgar
  */
-public class Pengguna {
+public class PERSON {
     private String username;
     private String nama;
     private String email;
     private String password;
 
-    public Pengguna(String username, String nama, String email, String password) {
+    public PERSON(String username, String nama, String email, String password) {
         this.username = username;
         this.nama = nama;
         this.email = email;
